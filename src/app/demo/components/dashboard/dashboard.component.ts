@@ -4,11 +4,12 @@ import { Product } from '../../api/product';
 import { ProductService } from '../../service/product.service';
 import { Subscription, debounceTime } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
-
+import { DUMMY_USERS } from '../../../dummy-users';
 @Component({
     templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit, OnDestroy {
+    selectedUser = DUMMY_USERS;
 
     items!: MenuItem[];
 
